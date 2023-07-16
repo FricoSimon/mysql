@@ -18,3 +18,9 @@ CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; // means only local
 
 // grant privileges
 GRANT ALL PRIVILEGES ON DBNAME.* TO 'username'@'localhost' WITH GRANT OPTION;
+
+// install mysql via docker
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
+
+// use mysql via docker
+ docker exec -it NAME mysql -u root -p
