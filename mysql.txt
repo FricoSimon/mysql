@@ -24,3 +24,6 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
 
 // use mysql via docker
  docker exec -it NAME mysql -u root -p
+
+// link my sql to phpmyadmin
+docker run -d --name phpmyadmin --link MYSQL ID:db -p 8080:80 phpmyadmin
