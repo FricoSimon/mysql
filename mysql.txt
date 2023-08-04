@@ -27,3 +27,10 @@ docker run --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
 
 // link my sql to phpmyadmin
 docker run -d --name phpmyadmin --link MYSQL ID:db -p 8080:80 phpmyadmin
+
+// change auth type in mysql server
+ALTER USER 'root'@'%' IDENTIFIED WITH 'mysql_native_password' BY 'YOUR PASS';
+
+// NOTE
+dont forget to docker inspect mysql to find the ip
+
